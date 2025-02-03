@@ -13,7 +13,8 @@ builder.Services.AddDbContext<StoreContext>(opt =>
 });
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();   //AddScoped: This service is going to live for as long as the Http Request
-                               
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
