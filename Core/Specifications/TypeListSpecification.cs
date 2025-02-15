@@ -3,9 +3,9 @@ using Core.Entities;
 
 namespace Core.Specifications;
 
-public class TypeListSpecifcation : BaseSpecification<Product, string>
+public class TypeListSpecification : BaseSpecification<Product, string>
 {
-    public TypeListSpecifcation()
+    public TypeListSpecification()
     {
         AddSelect(x=>x.Type);
         ApplyDistinct();
